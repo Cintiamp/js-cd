@@ -25,7 +25,7 @@ let padron = Number(prompt('Número de votantes según padrón electoral'))
 let porcentaje = Number((3 * padron) / 100)
 console.log('El 3% del total es ' + porcentaje)
 
-let finalistas = function (votosxpartido, porcentaje) {
+ function finalistas (votosxpartido, porcentaje) {
     if (votosxpartido >= porcentaje) {
         console.log(" y tiene posibilidad de obtener una Banca en el Congreso")
     } else {
@@ -41,7 +41,6 @@ finalistas()
 finalistas()
 
 
-/*
 // Acá se establecen los dividendos 
 
  let votos = Number(prompt('Votos válidamente emitidos: '))
@@ -58,4 +57,4 @@ finalistas()
 if (finalistas >= cargosvacantes) {
     console.log ("El partido va a obtener una Banca en el Congreso")
 }
-*/
+
