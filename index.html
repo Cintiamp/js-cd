@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema D'Hont</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            SISTEMA D'HONT
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href=""></a>Historia</li>
+            <li><a href=""></a>Críticas</li>
+        </ul>
+    </nav>
+    <main>
+
+        <section class="data">
+            <h2>¿Qué es el sistema D'Hont</h2>
+            <p>
+                El sistema o método D'Hondt es un método de promedio mayor para asignar escaños en los sistemas de
+                representación proporcional por listas electorales. Los métodos de promedio mayor se caracterizan por
+                dividir mediante sucesivos divisores los totales de los votos obtenidos por los distintos partidos,
+                dando secuencias de cocientes decrecientes para cada partido y asignando los escaños a los promedios más
+                altos. Fue creado por el jurista belga Victor d'Hondt en 1878.
+
+                Los sistemas de representación proporcional intentan asignar los escaños a las listas de manera
+                proporcional al número de votos recibidos. En general, no es posible alcanzar la proporcionalidad
+                exacta, ya que no es posible asignar un número decimal de escaños.
+
+                De los métodos comúnmente utilizados para la conversión proporcional de votos en escaños, el método
+                d’Hondt, siendo bastante proporcional, tiende a favorecer un poco más que otros a los grandes
+                partidos. Sin embargo, hay dos circunstancias que favorecen muchísimo más a dichos partidos: la
+                definición de las circunscripciones electorales pequeñas y la barrera electoral.
+
+                Al menos estos países utilizan el método d’Hondt para el reparto de votos en escaños: Albania,
+                Argentina, Austria, Bélgica, Bolivia, Brasil, Bulgaria, Camboya, Cabo Verde, Chile, Colombia,
+                Croacia, República Checa, República Dominicana, Ecuador, Escocia, Eslovenia, España, Estonia,
+                Finlandia, Gales, Guatemala, Hungría, Islandia, Israel, Japón, Serbia, Luxemburgo, Macedonia,
+                Moldavia, Montenegro, Países Bajos, Paraguay, Perú, Polonia, Portugal, Rumanía, Timor Oriental,
+                Turquía, Uruguay, y parcialmente Venezuela.
+            </p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Victor_D%27Hondt_%281841-1901%29_.jpg"
+                    alt="Victor d'Hondt">
+                <figcaption>
+                    Retrato de Victor d'Hondt, creador del método homónimo.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="simulador">
+
+            <form action="">
+                <fieldset>
+                    <legend>Datos votación</legend>
+                    <br>
+                    <div>
+                        <label for="padron">Número de votantes que figura en el padrón electoral.</label>
+                        <input type="number" name="padron">
+                    </div>                    
+                    <br>
+                    <div>
+                        <label for="nrototalvotos">Número de votos válidamente emitidos</label>
+                        <input type="number" name="nrototalvotos" >
+                    </div>
+                    <br>
+                    <div>
+                        <label for="nropartidos">Número de partidos presentados</label>
+                        <input type="number" name="nropartidos">
+                    </div>
+                    <div>
+                        <label for="pais">Candidatos</label>
+                        <select name="candidatos" id="">
+                            <option value="fdt">Frente de Todos</option>
+                            <option value="jxc">Juntos por el Cambio</option>
+                            <option value="fit">Frente de Izquierda</option>
+                            <option value="lbt">Libertarios</option>
+                            <option value="mst">MST</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="votosxpartido">Votos obtenidos</label>
+                        <input type="number" name="votosxpartido" required>
+                    </div>                    
+                    <br>
+                    <div>
+                        <input type="submit" value="Calcular">
+                        <input type="reset" value="Borrar Datos">
+                    </div>
+                </fieldset>
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        Copyright &copy - Todos los derechos reservados
+        <script src="./js/index.js"></script>
+    </footer>
+</body>
+
+</html>
