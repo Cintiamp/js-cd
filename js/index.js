@@ -2,20 +2,17 @@
 
 // Ingreso de datos de cantidad de votos por partido
 
-let partido = ""
-let votosxpartido = ""
+
 
 function candidato(partido, votosxpartido) {
-    partido = prompt('Ingrese el nombre de un partido: ')
-    votosxpartido = Number(prompt('Ingrese el número de votos obtenidos: '))
-    console.log("El partido " + partido + " obtuvo " + votosxpartido + " votos ")
+    for (let i = 1; i <= 5; i++) {
+        partido = prompt('Ingrese el nombre de un partido: ')
+        votosxpartido = Number(prompt('Ingrese el número de votos obtenidos: '))
+        console.log("El partido " + partido + " obtuvo " + votosxpartido + " votos ")
+    }
     return candidato
 }
 
-candidato()
-candidato()
-candidato()
-candidato()
 candidato()
 
 
@@ -25,7 +22,8 @@ let padron = Number(prompt('Número de votantes según padrón electoral'))
 let porcentaje = Number((3 * padron) / 100)
 console.log('El 3% del total es ' + porcentaje)
 
- function finalistas (votosxpartido, porcentaje) {
+
+function finalistas (votosxpartido, porcentaje) {
     if (votosxpartido >= porcentaje) {
         console.log(" y tiene posibilidad de obtener una Banca en el Congreso")
     } else {
@@ -57,4 +55,3 @@ finalistas()
 if (finalistas >= cargosvacantes) {
     console.log ("El partido va a obtener una Banca en el Congreso")
 }
-
