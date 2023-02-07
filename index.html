@@ -23,7 +23,7 @@
     <main>
 
         <section class="data">
-            <h2>¿Qué es el sistema D'Hont</h2>
+            <h2>¿Qué es el sistema D'Hont?</h2>
             <p>
                 El sistema o método D'Hondt es un método de promedio mayor para asignar escaños en los sistemas de
                 representación proporcional por listas electorales. Los métodos de promedio mayor se caracterizan por
@@ -59,43 +59,53 @@
 
         <section class="simulador">
 
-            <form action="">
+            <form name="datosVotacion">
                 <fieldset>
                     <legend>Datos votación</legend>
                     <br>
                     <div>
                         <label for="padron">Número de votantes que figura en el padrón electoral.</label>
-                        <input type="number" name="padron">
-                    </div>                    
+                        <input type="number" name="padron" id="padron">
+                    </div>
                     <br>
                     <div>
                         <label for="nrototalvotos">Número de votos válidamente emitidos</label>
-                        <input type="number" name="nrototalvotos" >
+                        <input type="number" name="nrototalvotos" name="nrototalvotos">
                     </div>
                     <br>
+
+                    <!--------- Votos por partido --------->
                     <div>
-                        <label for="nropartidos">Número de partidos presentados</label>
-                        <input type="number" name="nropartidos">
-                    </div>
-                    <div>
-                        <label for="pais">Candidatos</label>
-                        <select name="candidatos" id="">
-                            <option value="fdt">Frente de Todos</option>
-                            <option value="jxc">Juntos por el Cambio</option>
-                            <option value="fit">Frente de Izquierda</option>
-                            <option value="lbt">Libertarios</option>
-                            <option value="mst">MST</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="votosxpartido">Votos obtenidos</label>
-                        <input type="number" name="votosxpartido" required>
-                    </div>                    
-                    <br>
-                    <div>
-                        <input type="submit" value="Calcular">
-                        <input type="reset" value="Borrar Datos">
-                    </div>
+                        <p>Votos obtenidos</p>
+                        <div>
+                            <label for="fdt">Frente de Todos</label>
+                            <input type="number" name="fdt" name="fdt" id="fdt">
+                        </div>
+                        <div>
+                            <label for="jxc">Juntos por el Cambio</label>
+                            <input type="number" name="jxc" id="jxc">
+                        </div>
+                        <div>
+                            <label for="fit">Frente de Izquierda</label>
+                            <input type="number" name="fit" id="fit">
+                        </div>
+                        <div>
+                            <label for="lib">Libertarios</label>
+                            <input type="number" name="lib" id="lib">
+                        </div>
+                        <div>
+                            <label for="mst">Movimiento Socialista de los Trabajadores</label>
+                            <input type="number" name="mst" id="mst">
+                        </div>
+                        <div>
+                            <label for="bancas">Cargos vacantes</label>
+                            <input type="number" name="bancas" id="bancas">
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" value="Calcular" id="btnMain">
+                            <input type="reset" value="Borrar Datos" id="btnMain">
+                        </div>
                 </fieldset>
             </form>
 
@@ -103,7 +113,7 @@
     </main>
     <footer>
         Copyright &copy - Todos los derechos reservados
-        <script src="./js/index.js"></script>
+        <script src="./js/main.js"></script>
     </footer>
 </body>
 
