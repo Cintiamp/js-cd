@@ -1,19 +1,17 @@
 
-let candidato1, candidato2, candidato3, candidato4, candidato5, padron, votosValidos, bancas
+let candidato1, candidato2, candidato3, candidato4, candidato5, padron, nrototalvotos, bancas
 
-candidato1 = [Number(document.getElementById('fdt'))]
-candidato2 = [Number(document.getElementById('jxc'))]
-candidato3 = [Number(document.getElementById('fit'))]
-candidato4 = [Number(document.getElementById('lib'))]
-candidato5 = [Number(document.getElementById('mst'))]
+candidato1 = [Number(document.getElementById('fdt').value)]
+candidato2 = [Number(document.getElementById('jxc').value)]
+candidato3 = [Number(document.getElementById('fit').value)]
+candidato4 = [Number(document.getElementById('lib').value)]
+candidato5 = [Number(document.getElementById('mst').value)]
 
-padron = Number(document.getElementById('padron'))
+padron = Number(document.getElementById('padron').value)
 
-votosValidos = Number(document.getElementById('nrototalvotos'))
+nrototalvotos = Number(document.getElementById('nrototalvotos').value)
 
-nropartidos = Number(document.getElementById('nropartidos'))
-
-bancas = Number(document.getElementById('bancas'))
+bancas = Number(document.getElementById('bancas').value)
 
 // Acá voy a excluir a los partidos que no hayan obtenido el 3% de los votos del total del padrón electoral
 
@@ -46,34 +44,12 @@ switch (porcentaje) {
 // Acá se establecen los dividendos 
 const dividendos = [] 
 
-for (let i = 1 ; finalistas[0] <= bancas ; i++) {
+for (let i = 1 ; finalistas.length <= bancas ; i++) {
 
    (votosValidos / i).push(dividendos)
 
 } 
-for (let i = 1 ; finalistas[1] <= bancas ; i++) {
 
-    (votosValidos / i).push(dividendos)
- 
- } 
-
-for (let i = 1 ; finalistas[2] <= bancas ; i++) {
-
-    (votosValidos / i).push(dividendos)
- 
- } 
-
-for (let i = 1 ; finalistas[3] <= bancas ; i++) {
-
-    (votosValidos / i).push(dividendos)
- 
- } 
-
-for (let i = 1 ; finalistas[4] <= bancas ; i++) {
-
-    (votosValidos / i).push(dividendos)
- 
- } 
 
 // Asignando cargos a dividendos más altos
 
@@ -83,13 +59,14 @@ const seleccionados = dividendos.sort (function (a, b) {return b - a })
 for (let i= 0; i < seleccionados.length; i++) {
 
     if (seleccionados[i] >= bancas) {
-        let parrafo = document.createElement ("p")
+
+        let parrafo = document.createElement ("rdo")
         parrafo.innerHTML = <p>Van a obtener una banca</p>
         document.body.append(parrafo)
     }
 
 }
-
+/* 
 // Eventos
 
 let boton = document.getElementById("btnMain")
@@ -99,4 +76,4 @@ boton.onclick = () => {console.log("click")}
 // Storage
 
 const guardarLocal1 = (seleccionados) => { localStorage.setItem (seleccionados) }
-guardarLocal1("ganadores", JSON.stringify(seleccionados))
+guardarLocal1("ganadores", JSON.stringify(seleccionados)) */
